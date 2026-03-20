@@ -1,13 +1,8 @@
 import EventCard from "../components/EventCard";
 import Countdown from "../components/Countdown";
+import { subEvents } from "../data/events";
 
 const Home = () => {
-  const subEvents = [
-    { title: "Main Stage", description: "Live music all night.", location: "Central Park Arena" },
-    { title: "DJ Arena", description: "Electronic beats.", location: "Neon Dome Tent" },
-    { title: "Food Village", description: "Street food zone.", location: "Sunset Boulevard" },
-    { title: "Art Zone", description: "Creative workshops.", location: "Garden Area" },
-  ];
 
   return (
     <div>
@@ -15,35 +10,34 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 opacity-90"></div>
         <div className="relative z-10">
           <h1 className="text-4xl md:text-7xl font-extrabold mb-6">
-            SUMMER FESTIVAL 2026
+            Pinksteren 2026
           </h1>
           <h2 className="text-xl md:text-3xl font-semibold">
-            June 12 – June 15, 2026
+            Mei 20 – Mei 25, 2026
           </h2>
-          <Countdown targetDate="2026-06-12T12:00:00" />
+          <Countdown targetDate="2026-05-20T12:00:00" />
         </div>
       </div>
 
       <div className="mt-20">
         <h2 className="text-3xl font-bold text-center mb-10">
-          Festival Highlights
+          Highlights
         </h2>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {subEvents.map((event, index) => (
-            <EventCard key={index} {...event} />
+        <div className="flex flex-col">
+          {subEvents.map(({ description: _desc, ...event }, index) => (
+            <EventCard key={index} {...event} compact />
           ))}
         </div>
       </div>
 
       <div className="mt-24">
         <h2 className="text-3xl font-bold text-center mb-6">
-          📍 Festival Location
+          📍 Locatie
         </h2>
         <div className="rounded-2xl overflow-hidden shadow-2xl">
           <iframe
-            title="Festival Location"
-            src="https://www.google.com/maps?q=Central+Park,+New+York&output=embed"
-            width="100%"
+            title="Pinksteren Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2418.0346626473615!2d5.053741676269066!3d52.69546787210765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c8aeb9161830b9%3A0xd5643f703d536087!2sGanker%2041%2C%201688%20CS%20Nibbixwoud!5e0!3m2!1sen!2snl!4v1774033972336!5m2!1sen!2snl"
             height="400"
             loading="lazy"
             className="w-full"

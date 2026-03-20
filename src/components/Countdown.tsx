@@ -10,10 +10,10 @@ const Countdown = ({ targetDate }: Props) => {
     if (difference <= 0) return null;
 
     return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / 1000 / 60) % 60),
-      seconds: Math.floor((difference / 1000) % 60),
+      dagen: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      uren: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minuten: Math.floor((difference / 1000 / 60) % 60),
+      seconden: Math.floor((difference / 1000) % 60),
     };
   };
 
@@ -26,7 +26,7 @@ const Countdown = ({ targetDate }: Props) => {
     return () => clearInterval(timer);
   }, []);
 
-  if (!timeLeft) return <div>Festival Started!</div>;
+  if (!timeLeft) return <div>Pinksteren begint!</div>;
 
   return (
     <div className="flex flex-wrap justify-center gap-4 mt-8 text-white">

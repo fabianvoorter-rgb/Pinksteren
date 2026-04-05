@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// IMPORTANT:
-// Replace 'your-repo-name' with your actual GitHub repository name
-export default defineConfig({
-  base: "/Pinksteren/",
+// Use a production-only base so the dev server serves files from '/'
+// and assets referenced as '/assets/...' resolve correctly during development.
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/Pinksteren/' : '/',
   plugins: [react()],
-})
+}))

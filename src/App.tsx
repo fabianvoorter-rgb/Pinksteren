@@ -6,7 +6,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-yellow-50">
       <Navbar />
       <div className="flex-grow container mx-auto px-4 py-8">
         <Routes>

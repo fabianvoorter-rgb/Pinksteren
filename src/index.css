@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Base poster-like styling */
+html, body, #root {
+	height: 100%;
+}
+body {
+	@apply bg-gradient-to-b from-poster-sky to-white font-sans;
+}
+
+.poster-hero {
+	background: linear-gradient(180deg, rgba(63,176,240,0.95) 0%, rgba(111,199,255,0.9) 40%, rgba(255,255,255,0.0) 100%);
+}
+
+.ribbon {
+	background: linear-gradient(90deg, #ffb703, #ffdd57);
+	color: #111827;
+	display: inline-block;
+	padding: 0.35rem 1rem;
+	border-radius: 0.75rem;
+	box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+	font-family: 'Fredoka One', cursive;
+}
+
+.poster-title {
+	font-family: 'Fredoka One', cursive;
+	letter-spacing: -0.02em;
+}

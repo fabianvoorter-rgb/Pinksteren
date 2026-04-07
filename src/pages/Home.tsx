@@ -6,13 +6,16 @@ const Home = () => {
 
   return (
     <div>
-  <div className="relative text-white text-center py-16 md:py-24 px-4 md:px-6 rounded-2xl overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 opacity-90"></div>
-        <div className="relative z-10">
-          <h1 className="text-4xl md:text-7xl font-extrabold mb-6">
-            Pinksteren 2026
+      <div className="poster-hero relative text-center py-12 md:py-20 px-4 md:px-6 rounded-2xl overflow-hidden shadow-poster">
+        <div className="relative z-10 text-white">
+          <div className="inline-block mb-4">
+            <span className="ribbon text-lg md:text-2xl">UITNODIGING</span>
+          </div>
+
+          <h1 className="poster-title text-5xl md:text-8xl text-yellow-400 drop-shadow-lg mb-3">
+            PINKSTEREN
           </h1>
-          <h2 className="text-xl md:text-3xl font-semibold">
+          <h2 className="text-xl md:text-3xl font-semibold text-white/90 mb-4">
             Mei 20 – Mei 25, 2026
           </h2>
           <Countdown targetDate="2026-05-20T12:00:00" />

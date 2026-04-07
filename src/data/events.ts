@@ -45,8 +45,8 @@ export const subEvents = [
       "Een talentenshow voor jong en oud, met muziek, dans, en andere verrassende acts. Aanmelden kan ter plekke!",
     date: "Mei 24, 2026",
     time: "15:00 – 17:30",
-    image:
-      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80",
+    subtitle: "Thema: Sport & Spel",
+    image: `${(import.meta as any).env.BASE_URL}assets/tent.jpg`,
   },
   {
     title: "BBQ",

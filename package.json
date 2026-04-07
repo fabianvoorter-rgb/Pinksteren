@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && cd dist && git init && git checkout -b gh-pages && git add -A && git commit -m deploy && git remote add origin https://github.com/fabianvoorter-rgb/Pinksteren.git && git push -f origin gh-pages"
-  },
+  "deploy": "node ./scripts/deploy.cjs"  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

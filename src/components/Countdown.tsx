@@ -29,11 +29,15 @@ const Countdown = ({ targetDate }: Props) => {
   if (!timeLeft) return <div>Pinksteren begint!</div>;
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 mt-8 text-white">
+    <div className="flex flex-wrap justify-center gap-3 mt-6 text-white px-2">
       {Object.entries(timeLeft).map(([key, value]) => (
-        <div key={key} className="bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl text-center shadow-lg">
-          <div className="text-3xl font-bold">{value}</div>
-          <div className="text-sm uppercase">{key}</div>
+        <div
+          key={key}
+          className="bg-white/10 backdrop-blur-md px-3 py-2 sm:px-6 sm:py-4 rounded-xl text-center shadow-lg min-w-[64px] flex flex-col items-center"
+          aria-label={`${key} remaining`}
+        >
+          <div className="text-2xl sm:text-3xl font-bold leading-tight">{value}</div>
+          <div className="text-xs sm:text-sm uppercase mt-1">{key}</div>
         </div>
       ))}
     </div>

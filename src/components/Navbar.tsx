@@ -5,15 +5,15 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-black text-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-yellow-50 text-yellow-400 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
         <div className="w-full md:w-auto flex items-center justify-between">
-          <h1 className="text-2xl font-extrabold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+          <h1 className="text-2xl md:text-3xl font-extrabold poster-title">
             Pinksteren 2026
           </h1>
           <button
             aria-label="Toggle menu"
-            className="md:hidden text-white"
+            className="text-yellow-400 md:hidden"
             onClick={() => setOpen((s) => !s)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -24,9 +24,9 @@ const Navbar = () => {
 
         <div className={`w-full md:w-auto mt-4 md:mt-0 ${open ? "block" : "hidden"} md:block`}>
           <div className="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-2 md:space-y-0 font-medium">
-            <Link to="/" className="hover:text-pink-400 transition">Home</Link>
-            <Link to="/planning" className="hover:text-pink-400 transition">Evenementen</Link>
-            <Link to="/contact" className="hover:text-pink-400 transition">Opgeven</Link>
+            <Link to="/" onClick={() => setOpen((s) => !s)} className="hover:text-pink-400 transition">Home</Link>
+            <Link to="/planning" onClick={() => setOpen((s) => !s)} className="hover:text-pink-400 transition">Evenementen</Link>
+            <Link to="/contact" onClick={() => setOpen((s) => !s)} className="hover:text-pink-400 transition">Opgeven</Link>
           </div>
         </div>
       </div>

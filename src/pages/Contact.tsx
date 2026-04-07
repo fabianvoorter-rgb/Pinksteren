@@ -124,7 +124,7 @@ const Contact = () => {
 
   return (
     <div className="max-w-lg mx-auto">
-      <h2 className="text-3xl font-bold mb-6 text-center">Opgeven padel/bonte middag</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center">Aanmelden padel/bonte middag</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex gap-4 items-center">

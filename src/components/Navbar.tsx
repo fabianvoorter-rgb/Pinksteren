@@ -26,7 +26,7 @@ const Navbar = () => {
           <div className="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-2 md:space-y-0 font-medium">
             <Link to="/" onClick={() => setOpen((s) => !s)} className="hover:text-pink-400 transition">Home</Link>
             <Link to="/planning" onClick={() => setOpen((s) => !s)} className="hover:text-pink-400 transition">Evenementen</Link>
-            <Link to="/contact" onClick={() => setOpen((s) => !s)} className="hover:text-pink-400 transition">Opgeven</Link>
+            <Link to="/contact" onClick={() => setOpen((s) => !s)} className="hover:text-pink-400 transition">Aanmelden</Link>
           </div>
         </div>
       </div>

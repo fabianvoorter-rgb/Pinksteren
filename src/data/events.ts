@@ -17,6 +17,7 @@ export const subEvents = [
   },
   {
     title: "Padeltoernooi",
+    subtitle: "Aanmelden veplicht! kosten ~ €10 pp",
     description:
       "Doe mee aan het padeltoernooi bij een nabije padelclub, open voor alle leeftijden en niveaus.",
     date: "Mei 23, 2026",
